@@ -1,0 +1,30 @@
+/* Source:  http://css-tricks.com/logic-in-media-queries/  */
+ 
+/* Use of And */
+@media (min-width: 600px) and (max-width: 800px) {
+  html { background: red; }
+}
+ 
+/* Or  Comma separate  */
+@media (max-width: 600px), (min-width: 800px) {
+  html { background: red; }
+}
+ 
+/*  Not   -- Reverse the logic with the keyword not  */
+@media not all and (max-width: 600px) {
+  html { background: red; }
+}
+ 
+/* Exclusive  --   To ensure that only one media query is in effect at time, make the numbers (or whatever) such that that is possible. 
+It may be easier to mentally manage them this way  */
+ 
+@media (max-width: 400px) {
+  html { background: red; }
+}
+@media (min-width: 401px) and (max-width: 800px) {
+  html { background: green; }
+}
+@media (min-width: 801px) {
+  html { background: blue; }
+}
+ 
